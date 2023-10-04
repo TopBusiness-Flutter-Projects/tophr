@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:sizer/sizer.dart';
+import 'package:tophr/features/onboarding/cubit/onboarding_cubit.dart';
 import 'config/routes/app_routes.dart';
 import 'config/theme/app_theme.dart';
 import 'core/utils/app_strings.dart';
 import 'package:tophr/injector.dart' as injector;
+
+import 'features/home/cubit/home_cubit.dart';
+import 'features/login/cubit/login_cubit.dart';
 
 class TopHr extends StatelessWidget {
   const TopHr({Key? key}) : super(key: key);
@@ -13,17 +19,17 @@ class TopHr extends StatelessWidget {
   Widget build(BuildContext context) {
     // print(text);
 
-    // return MultiBlocProvider(
-    //   providers: [
-    //     // BlocProvider(
-    //     //   create: (_) => injector.serviceLocator<SplashCubit>(),
-    //     // ),
-    //     // BlocProvider(
-    //     //   create: (_) => injector.serviceLocator<LoginCubit>(),
-    //     // ),
-    //     // BlocProvider(
-    //     //   create: (_) => injector.serviceLocator<HomeCubit>(),
-    //     // ),
+    return MultiBlocProvider(
+      providers: [
+         BlocProvider(
+           create: (_) => injector.serviceLocator<OnBoardingCubit>(),
+         ),
+        BlocProvider(
+          create: (_) => injector.serviceLocator<LoginCubit>(),
+        ),
+        BlocProvider(
+          create: (_) => injector.serviceLocator<HomeCubit>(),
+        ),
     //     // BlocProvider(
     //     //   create: (_) => injector.serviceLocator<PostsCubit>(),
     //     // ),
@@ -45,8 +51,12 @@ class TopHr extends StatelessWidget {
     //
     //
     //
-    //   ],
-return GetMaterialApp(
+      ],
+               child: Sizer(
+                 builder: (context, orientation, deviceType) {
+
+
+                 return GetMaterialApp(
         supportedLocales: context.supportedLocales,
         locale: context.locale,
         theme: appTheme(),
@@ -58,6 +68,9 @@ return GetMaterialApp(
         title: AppStrings.appName,
         onGenerateRoute: AppRoutes.onGenerateRoute,
 
+              );
+                 },
+               ),
     );
   }
 }

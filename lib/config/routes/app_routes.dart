@@ -1,14 +1,27 @@
 
 import 'package:flutter/material.dart';
+import 'package:tophr/features/login/screens/login1.dart';
+import 'package:tophr/features/login/screens/login2.dart';
+import 'package:tophr/features/onboarding/screens/onboarding.dart';
 import '../../core/models/product_model.dart';
 import '../../core/models/shipment_model.dart';
 import '../../core/utils/app_strings.dart';
+import '../../features/home/screens/home_screen.dart';
+import '../../features/onboarding/screens/onboarding1.dart';
+import '../../features/onboarding/screens/onboarding2.dart';
+import '../../features/onboarding/screens/onboarding3.dart';
+import '../../features/onboarding/screens/onboarding4.dart';
 import '../../features/splash/screens/splash_screen.dart';
 
 class Routes{
   static const String initialRoute = '/';
   static const String onBoardingRoute = '/onBoarding';
-  static const String loginRoute = '/login';
+  static const String onBoarding1Route = '/onBoarding1';
+  static const String onBoarding2Route = '/onBoarding2';
+  static const String onBoarding3Route = '/onBoarding3';
+  static const String onBoarding4Route = '/onBoarding4';
+  static const String loginRoute2 = '/login2';
+  static const String loginRoute1 = '/login1';
   static const String signUpRoute = '/signUp';
   static const String forgotPassword1Route = '/forgotPassword1';
   static const String forgotPassword2Route = '/forgotPassword2';
@@ -52,7 +65,33 @@ class AppRoutes{
      case Routes.initialRoute:
        return MaterialPageRoute(builder: (context) => const SplashScreen(),);
 
+     case Routes.onBoardingRoute:
+       return MaterialPageRoute(builder: (context) => const OnBoarding(),);
 
+
+     case Routes.onBoarding1Route:
+       return MaterialPageRoute(builder: (context) => const OnBoarding1(),);
+
+
+     case Routes.onBoarding2Route:
+       return MaterialPageRoute(builder: (context) => const OnBoarding2(),);
+
+     case Routes.onBoarding3Route:
+       return MaterialPageRoute(builder: (context) => const OnBoarding3(),);
+
+     case Routes.onBoarding4Route:
+       return MaterialPageRoute(builder: (context) => const OnBoarding4(),);
+
+
+     case Routes.loginRoute1:
+       return MaterialPageRoute(builder: (context) => const LoginScreen1(),);
+
+     case Routes.loginRoute2:
+       return MaterialPageRoute(builder: (context) => const LoginScreen2(),);
+
+
+     case Routes.homeRoute:
+       return MaterialPageRoute(builder: (context) => const HomeScreen(),);
 
 
      default:

@@ -1,10 +1,13 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tophr/features/onboarding/cubit/onboarding_cubit.dart';
 import 'core/api/app_interceptors.dart';
 import 'core/api/base_api_consumer.dart';
 import 'core/api/dio_consumer.dart';
 import 'core/remote/service_api.dart';
+import 'features/home/cubit/home_cubit.dart';
+import 'features/login/cubit/login_cubit.dart';
 
 // import 'features/downloads_videos/cubit/downloads_videos_cubit.dart';
 
@@ -14,17 +17,23 @@ Future<void> setup() async {
   //! Features
 
   ///////////////////////// Blocs ////////////////////////
-  //
-  // serviceLocator.registerFactory(
-  //   () => SplashCubit(
-  //       // serviceLocator(),
-  //       ),
 
-  // serviceLocator.registerFactory(
-  //   () => LoginCubit(
-  //     serviceLocator(),
-  //   ),
-  // );
+  serviceLocator.registerFactory(
+    () => OnBoardingCubit(
+        // serviceLocator(),
+        )
+  );
+
+  serviceLocator.registerFactory(
+    () => LoginCubit(
+     // serviceLocator(),
+    ),
+  );
+  serviceLocator.registerFactory(
+    () => HomeCubit(
+     // serviceLocator(),
+    ),
+  );
   // serviceLocator.registerFactory(
   //       () => GoogleMapsCubit(
   //    // serviceLocator(),
@@ -40,11 +49,7 @@ Future<void> setup() async {
   //     serviceLocator(),
   //   ),
   // );
-  // serviceLocator.registerFactory(
-  //   () => HomeCubit(
-  //     serviceLocator(),
-  //   ),
-  // );
+
   // serviceLocator.registerFactory(
   //   () => PostsCubit(
   //     serviceLocator(),

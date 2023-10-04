@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import '../utils/app_colors.dart';
 
 class CustomArrowBack extends StatelessWidget {
-  const CustomArrowBack({super.key});
+  final void Function()? onPressed;
+  const CustomArrowBack({super.key,required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -12,14 +13,15 @@ class CustomArrowBack extends StatelessWidget {
     return    Padding(
       padding: const EdgeInsets.only(left: 8.0),
       child: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
+          onPressed: onPressed,
+          //     () {
+          //   Navigator.pop(context);
+          // },
           icon: Transform.rotate(
             angle: lang == "en" ? 0 : (3.14),
             child: const Icon(
               Icons.arrow_back_ios,
-              color: AppColors.lightBlue,
+              color: AppColors.yellow,
             ),
           )),
     );
