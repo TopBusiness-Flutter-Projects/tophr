@@ -106,19 +106,8 @@ class LoginScreen2 extends StatelessWidget{
                       ],
                     ),
                   ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Padding(padding: EdgeInsets.symmetric(horizontal: 10),
-                      child: TextButton(
-                        child: Text('contact_us',
-                          style: Theme.of(context).textTheme.bodyMedium,).tr(),
-                        onPressed: () async {
-                          whatsapp();
 
-                        },
-                      ),),
-                  ),
-                SizedBox(height: 5.h,),
+                SizedBox(height: 11.h,),
                   BottomCopyRightsWidget()
 
                 // Spacer(),

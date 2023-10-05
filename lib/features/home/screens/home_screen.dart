@@ -21,16 +21,16 @@ class HomeScreen extends StatelessWidget {
         return Scaffold(
           backgroundColor: AppColors.primary,
 
-          body:cubit.tabs[cubit.currentIndex] ,
+          body:cubit.tabs[cubit.homeTabCurrentIndex] ,
           bottomNavigationBar: Theme(
             data: Theme.of(context).copyWith(
                 canvasColor: AppColors.blue2
             ),
             child: BottomNavigationBar(
               onTap: (value) {
-                cubit.changeTabs(value);
+                cubit.changeHomeTabs(value);
               },
-              currentIndex: cubit.currentIndex,
+              currentIndex: cubit.homeTabCurrentIndex,
               showSelectedLabels: true,
               showUnselectedLabels: true,
               selectedItemColor: AppColors.yellow,

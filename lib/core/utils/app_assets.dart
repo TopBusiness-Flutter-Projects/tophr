@@ -12,6 +12,11 @@ class AssetsManager {
   static const String notificationIcon = "$iconPath/notification.svg";
   static const String accountIcon = "$iconPath/account.svg";
   static const String menuIcon = "$iconPath/menu.svg";
+  static const String languageIcon = "$iconPath/language.svg";
+  static const String privacyIcon = "$iconPath/privacy.svg";
+  static const String contactIcon = "$iconPath/contact.svg";
+  static const String optionsIcon = "$iconPath/options.svg";
+
 
   ////////////////////////////////////////////////////////////////////////////////
   static const String copyRights = "$imagePath/copyright.png";
@@ -20,6 +25,10 @@ class AssetsManager {
   static const String onboarding3 = "$imagePath/onboarding3.png";
   static const String onboarding4 = "$imagePath/onboarding4.png";
   static const String topHrWhite = "$imagePath/tophrwhite.png";
+  static const String person = "$imagePath/person.png";
+  static const String attendance = "$imagePath/attendance.png";
+  static const String wallet = "$imagePath/wallet.png";
+  static const String mobile = "$imagePath/mobile.png";
 
   //*********************products*****************************
 

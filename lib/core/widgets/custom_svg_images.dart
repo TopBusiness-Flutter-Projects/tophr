@@ -4,7 +4,11 @@ import 'package:flutter_svg/svg.dart';
 import '../utils/app_colors.dart';
 
 class MySvgWidget extends StatelessWidget {
-  const MySvgWidget({Key? key, required this.path, required this.imageColor, required this.size})
+  const MySvgWidget(
+      {Key? key,
+      required this.path,
+      required this.imageColor,
+      required this.size})
       : super(key: key);
 
   final String path;
@@ -18,8 +22,8 @@ class MySvgWidget extends StatelessWidget {
       width: size,
       child: SvgPicture.asset(
         path,
-       color: AppColors.primary,
-       colorFilter: ColorFilter.mode(imageColor, BlendMode.srcIn),
+        color: AppColors.primary,
+        colorFilter: ColorFilter.mode(imageColor, BlendMode.srcIn),
         height: size,
         width: size,
       ),
