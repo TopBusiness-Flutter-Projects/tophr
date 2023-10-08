@@ -29,6 +29,7 @@ class AssetsManager {
   static const String attendance = "$imagePath/attendance.png";
   static const String wallet = "$imagePath/wallet.png";
   static const String mobile = "$imagePath/mobile.png";
+  static const String money = "$imagePath/money.png";
 
   //*********************products*****************************
 

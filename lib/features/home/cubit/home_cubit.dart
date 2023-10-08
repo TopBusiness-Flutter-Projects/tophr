@@ -18,6 +18,7 @@ class HomeCubit extends Cubit<HomeState> {
 
   int homeTabCurrentIndex = 0 ;
   int accountTabsCurrentIndex =0;
+  bool isPresence = true;
   //List<String> titles = ["products","sales","returns","customer_payments","dismissal_notice"];
  // List<String> imagesPath = [AssetsManager.packageDelivery,AssetsManager.deliveryTruck,AssetsManager.cashFlow,AssetsManager.budget,AssetsManager.order];
   List<Widget> tabs=[const HomeTab(),const NewsTab(),const NotificationTab(),AccountTab(),menuTab()];
@@ -29,5 +30,10 @@ class HomeCubit extends Cubit<HomeState> {
   changeAccountTabs(int index){
   accountTabsCurrentIndex = index;
   emit(AccountTabsChanging());
+  }
+
+  changePresenceButton(){
+  isPresence = !isPresence;
+  emit(changingButton());
   }
 }

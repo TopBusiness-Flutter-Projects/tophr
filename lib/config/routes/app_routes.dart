@@ -1,8 +1,11 @@
 
 import 'package:flutter/material.dart';
+import 'package:tophr/features/expenses/screens/expenses_screen.dart';
 import 'package:tophr/features/login/screens/login1.dart';
 import 'package:tophr/features/login/screens/login2.dart';
 import 'package:tophr/features/onboarding/screens/onboarding.dart';
+import 'package:tophr/features/salary/screens/salary_slip_screen.dart';
+import 'package:tophr/features/vacations/screens/vacations_screen.dart';
 import '../../core/models/product_model.dart';
 import '../../core/models/shipment_model.dart';
 import '../../core/utils/app_strings.dart';
@@ -47,6 +50,9 @@ class Routes{
   static const String  googleMapRoutingRoute = '/ googleMapRoutingScreen';
   static const String  salesOrderedListRoute = '/ salesOrderedListScreen';
   static const String  returnsListRoute = '/ returnsListScreen';
+  static const String  expensesRoute = '/ expensesScreen';
+  static const String  salarySlipRoute = '/ salarySlipScreen';
+  static const String  vacationsRoute = '/ vacationsScreen';
 
 }
 
@@ -92,6 +98,18 @@ class AppRoutes{
 
      case Routes.homeRoute:
        return MaterialPageRoute(builder: (context) => const HomeScreen(),);
+
+
+     case Routes.expensesRoute:
+       return MaterialPageRoute(builder: (context) => const ExpensesScreen(),);
+
+
+     case Routes.vacationsRoute:
+       return MaterialPageRoute(builder: (context) => const VacationsScreen(),);
+
+
+     case Routes.salarySlipRoute:
+       return MaterialPageRoute(builder: (context) => const SalarySlipScreen(),);
 
 
      default:
