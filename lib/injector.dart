@@ -53,6 +53,7 @@ Future<void> setup() async {
      // serviceLocator(),
     ),
   );
+  //
   // serviceLocator.registerFactory(
   //       () => GoogleMapsCubit(
   //    // serviceLocator(),
