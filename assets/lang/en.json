@@ -102,8 +102,13 @@
  "privacy": "Privacy",
  "about": "About",
  "contact_management": "Contact management application services",
- "you_can_contact": "You can contact with the Department of Application Services to provide Support, assistance and suggestions through data the following contact:"
+ "you_can_contact": "You can contact with the Department of Application Services to provide Support, assistance and suggestions through data the following contact:",
 
-
+ "the_kind_of_holiday": "The kind of holiday",
+ "order": "order",
+ "salarySlips": "Salary slips",
+ "theBasic": "The basic",
+ "add-ons": "Add-ons",
+ "deductions": "Deductions"
 
 }

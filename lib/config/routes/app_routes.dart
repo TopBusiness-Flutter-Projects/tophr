@@ -9,7 +9,9 @@ import 'package:tophr/features/vacations/screens/vacations_screen.dart';
 import '../../core/models/product_model.dart';
 import '../../core/models/shipment_model.dart';
 import '../../core/utils/app_strings.dart';
+import '../../features/home/sallary/screens/sallay_screen.dart';
 import '../../features/home/screens/home_screen.dart';
+import '../../features/home/vacations/vacations.dart';
 import '../../features/onboarding/screens/onboarding1.dart';
 import '../../features/onboarding/screens/onboarding2.dart';
 import '../../features/onboarding/screens/onboarding3.dart';
@@ -53,6 +55,11 @@ class Routes{
   static const String  expensesRoute = '/ expensesScreen';
   static const String  salarySlipRoute = '/ salarySlipScreen';
   static const String  vacationsRoute = '/ vacationsScreen';
+  static const String  sallary = '/sallary';
+
+  static const String  vacations = '/vacations';
+
+  static const String  expenses = '/expenses';
 
 }
 
@@ -77,16 +84,24 @@ class AppRoutes{
 
      case Routes.onBoarding1Route:
        return MaterialPageRoute(builder: (context) => const OnBoarding1(),);
+     case Routes.expenses:
+       return MaterialPageRoute(builder: (context) => const ExpensesScreen(),);
 
 
      case Routes.onBoarding2Route:
        return MaterialPageRoute(builder: (context) => const OnBoarding2(),);
+
+     case Routes.vacations:
+       return MaterialPageRoute(builder: (context) =>  Vacations(),);
 
      case Routes.onBoarding3Route:
        return MaterialPageRoute(builder: (context) => const OnBoarding3(),);
 
      case Routes.onBoarding4Route:
        return MaterialPageRoute(builder: (context) => const OnBoarding4(),);
+
+     case Routes.sallary:
+       return MaterialPageRoute(builder: (context) => const SallaryScreen(),);
 
 
      case Routes.loginRoute1:

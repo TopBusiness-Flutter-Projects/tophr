@@ -159,7 +159,7 @@ class HomeTab extends StatelessWidget {
             children: [
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, Routes.expensesRoute);
+                  Navigator.pushNamed(context, Routes.expenses);
                 },
                 child: Container(
                   alignment: Alignment.topCenter,
@@ -186,7 +186,8 @@ class HomeTab extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, Routes.vacationsRoute);
+               //   Navigator.pushNamed(context, Routes.vacationsRoute);
+                  Navigator.pushNamed(context, Routes.vacations);
                 },
                 child: Container(
                   alignment: Alignment.topCenter,
@@ -215,7 +216,7 @@ class HomeTab extends StatelessWidget {
               InkWell(
                 onTap: () {
                   print("***************************");
-                       Navigator.pushNamed(context, Routes.salarySlipRoute);
+                       Navigator.pushNamed(context, Routes.sallary);
                 },
                 child: Container(
                   alignment: Alignment.topCenter,

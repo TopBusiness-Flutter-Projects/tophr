@@ -10,6 +10,9 @@ import 'core/utils/app_strings.dart';
 import 'package:tophr/injector.dart' as injector;
 
 import 'features/home/cubit/home_cubit.dart';
+import 'features/home/expenses/cubit/expenses_cubit.dart';
+import 'features/home/sallary/cubit/sallary_cubit.dart';
+import 'features/home/vacations/cubit/vacations_cubit.dart';
 import 'features/login/cubit/login_cubit.dart';
 
 class TopHr extends StatelessWidget {
@@ -21,12 +24,22 @@ class TopHr extends StatelessWidget {
 
     return MultiBlocProvider(
       providers: [
+        BlocProvider(
+          create: (_) => injector.serviceLocator<VacationsCubit>(),
+        ),
+        BlocProvider(
+          create: (_) => injector.serviceLocator<SallaryCubit>(),
+        ),
+        BlocProvider(
+          create: (_) => injector.serviceLocator<ExpensesCubit>(),
+        ),
          BlocProvider(
            create: (_) => injector.serviceLocator<OnBoardingCubit>(),
          ),
         BlocProvider(
           create: (_) => injector.serviceLocator<LoginCubit>(),
         ),
+
         BlocProvider(
           create: (_) => injector.serviceLocator<HomeCubit>(),
         ),
@@ -57,6 +70,8 @@ class TopHr extends StatelessWidget {
 
 
                  return GetMaterialApp(
+
+                   debugShowMaterialGrid: false,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
         theme: appTheme(),

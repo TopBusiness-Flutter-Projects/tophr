@@ -7,6 +7,9 @@ import 'core/api/base_api_consumer.dart';
 import 'core/api/dio_consumer.dart';
 import 'core/remote/service_api.dart';
 import 'features/home/cubit/home_cubit.dart';
+import 'features/home/expenses/cubit/expenses_cubit.dart';
+import 'features/home/sallary/cubit/sallary_cubit.dart';
+import 'features/home/vacations/cubit/vacations_cubit.dart';
 import 'features/login/cubit/login_cubit.dart';
 
 // import 'features/downloads_videos/cubit/downloads_videos_cubit.dart';
@@ -23,12 +26,28 @@ Future<void> setup() async {
         // serviceLocator(),
         )
   );
+  serviceLocator.registerFactory(
+          () => VacationsCubit(
+        serviceLocator(),
+      )
+  );
 
   serviceLocator.registerFactory(
     () => LoginCubit(
      // serviceLocator(),
     ),
   );
+  serviceLocator.registerFactory(
+        () => SallaryCubit(
+       serviceLocator(),
+    ),
+  );
+  serviceLocator.registerFactory(
+        () => ExpensesCubit(
+      serviceLocator(),
+    ),
+  );
+  //
   serviceLocator.registerFactory(
     () => HomeCubit(
      // serviceLocator(),

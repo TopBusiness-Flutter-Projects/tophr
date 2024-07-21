@@ -60,6 +60,9 @@ dependencies:
   location:
   flutter_phoenix: ^1.1.1
   smooth_page_indicator:
+  percent_indicator: ^4.2.3
+  dropdown_button2: ^2.3.9
+  hexcolor: ^3.0.1
 
 dev_dependencies:
   flutter_test:
