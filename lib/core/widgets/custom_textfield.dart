@@ -23,7 +23,7 @@ class CustomTextField extends StatelessWidget {
     this.readOnly = false,
     this.onTap,
     this.contentPadding =
-        const EdgeInsets.symmetric(vertical: 0, horizontal: 14), this.horizantalTape=20,
+        const EdgeInsets.symmetric(vertical: 0, horizontal: 10), this.horizantalTape=15,
   }) : super(key: key);
   final Widget? suffixWidget;
   final bool readOnly;
@@ -54,7 +54,7 @@ class CustomTextField extends StatelessWidget {
         keyboardType: textInputType,
         obscureText: isPassword,
         enabled: isEnable,
-        textAlign: TextAlign.start,
+        textAlign: TextAlign.end,
         style: const TextStyle(fontSize: 14,color: AppColors.white),
         decoration: InputDecoration(
           contentPadding: contentPadding,

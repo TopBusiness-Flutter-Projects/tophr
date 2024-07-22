@@ -109,6 +109,10 @@
   "salarySlips": "قسائم الراتب",
   "theBasic": "الاساسي",
   "add-ons": "الاضافات",
-  "deductions": "الاستقطاعات"
+  "deductions": "الاستقطاعات",
+  "expenses": "المصروفات",
+  "addAnExpense": "اضافة مصروف",
+  "addition": "اضافة",
+  "the_expense": "المصروف ج.م"
 
 }

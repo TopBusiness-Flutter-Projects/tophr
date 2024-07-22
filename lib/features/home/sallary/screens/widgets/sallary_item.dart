@@ -18,10 +18,7 @@ class SalaryItem extends StatelessWidget {
             title,
             style: TextStyle(color: Colors.white, fontSize: 14),
           ),
-          Text(
-            amount,
-            style: TextStyle(color: Colors.white, fontSize: 14),
-          ),
+          Text(amount, style: TextStyle(color: Colors.white, fontSize: 14),),
         ],
       ),
     );

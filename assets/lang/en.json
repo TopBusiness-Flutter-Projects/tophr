@@ -109,6 +109,10 @@
  "salarySlips": "Salary slips",
  "theBasic": "The basic",
  "add-ons": "Add-ons",
- "deductions": "Deductions"
+ "deductions": "Deductions",
+ "expenses": "Expenses",
+ "addAnExpense": "Add an expense",
+ "addition": "Add",
+ "the_expense": "The Expense E.G"
 
 }

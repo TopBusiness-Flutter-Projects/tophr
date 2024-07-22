@@ -36,9 +36,9 @@ class _AccountTabState extends State<AccountTab> with TickerProviderStateMixin {
       backgroundColor: AppColors.primary,
       body: Column(
         children: [
-          SizedBox(height: 4.h),
+          SizedBox(height: 3.h),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 3.h),
+            padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 2.h),
             child: Row(
               children: [
                 Text(
@@ -51,6 +51,8 @@ class _AccountTabState extends State<AccountTab> with TickerProviderStateMixin {
          // SizedBox(height: 0.h,),
           Stack(
             children: [
+              SizedBox(height:20.h),
+
               SizedBox(
                // color: Colors.cyan,
                 height: 75.h,
@@ -74,24 +76,27 @@ class _AccountTabState extends State<AccountTab> with TickerProviderStateMixin {
                         children: [
 
                        ...List.generate(2, (index) =>
-                       CustomButton(
-                         backgroundColor:cubit.accountTabsCurrentIndex==index?AppColors.lightYellow :AppColors.primary,
-                         textColor:cubit.accountTabsCurrentIndex==index? AppColors.white:AppColors.white.withOpacity(0.5),
-                         text:index==0? "job_information":"private_information",
-                         height: 6.h,
-                         fontSize: 15.sp,
-                         onPressed: () {
-                           // cubit.changeAccountTabs(index);
-                           // print("job index = ${cubit.accountTabsCurrentIndex}");
-                            tabController.animateTo(index);
-                         },),)
+                       Padding(
+                         padding: const EdgeInsets.only( top: 10.0),
+                         child: CustomButton(
+                           backgroundColor:cubit.accountTabsCurrentIndex==index?AppColors.lightYellow :AppColors.primary,
+                           textColor:cubit.accountTabsCurrentIndex==index? AppColors.white:AppColors.white.withOpacity(0.5),
+                           text:index==0? "job_information":"private_information",
+                           height: 6.h,
+                           fontSize: 15.sp,
+                           onPressed: () {
+                              cubit.changeAccountTabs(index);
+                             // print("job index = ${cubit.accountTabsCurrentIndex}");
+                              tabController.animateTo(index);
+                           },),
+                       ),)
                       ],),
                       Padding(
                         padding: const EdgeInsets.only(top: 18.0),
                         child: SizedBox(
                           height:40.h,
                             child: TabBarView(
-                              controller:tabController ,
+                              controller:tabController,
                               children: [
                                JobInformation(),//red
                                 PrivateInformation()//green
@@ -105,9 +110,9 @@ class _AccountTabState extends State<AccountTab> with TickerProviderStateMixin {
                 ),
               ),
               Align(
-                alignment: Alignment.center,
+                alignment: Alignment.topCenter,
                 child: Container(
-                  height:25.h,
+                  height:28.h,
                   width: 55.w,
                   decoration: BoxDecoration(
                     color: AppColors.blue2,

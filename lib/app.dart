@@ -82,7 +82,6 @@ class TopHr extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: AppStrings.appName,
         onGenerateRoute: AppRoutes.onGenerateRoute,
-
               );
                  },
                ),
